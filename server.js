@@ -9,6 +9,11 @@ const PORT = 5001;
 app.use(bodyParser.json());
 app.use(cors());
 
+// Hlavní stránka
+app.get('/', (req, res) => {
+  res.send('Backend běží! 🚀');
+});
+
 // Mock data - seznam aut
 let cars = [
     { id: 1, name: "Lexus RX 500h", description: "Hybridní luxusní SUV", image: "lexus-rx-500h.jpg", reservations: [] },
